@@ -29,6 +29,11 @@ function FP_getObjectByID(id,o) {//v1.0
  for(m=0; m<els.length; m++){ el=FP_getObjectByID(id,els[n]); if(el) return el; } }
  return null;
 }
+
+function FP_preloadImgs() {//v1.0
+ var d=document,a=arguments; if(!d.FP_imgs) d.FP_imgs=new Array();
+ for(var i=0; i<a.length; i++) { d.FP_imgs[i]=new Image; d.FP_imgs[i].src=a[i]; }
+}
 // -->
 </script>
 <!--[if gte mso 9]>
@@ -36,7 +41,7 @@ function FP_getObjectByID(id,o) {//v1.0
 </xml><![endif]-->
 </head>
 
-<body>
+<body onload="FP_preloadImgs(/*url*/'button73.jpg',/*url*/'button74.jpg',/*url*/'button47.jpg',/*url*/'button46.jpg',/*url*/'button53.jpg',/*url*/'button52.jpg',/*url*/'button56.jpg',/*url*/'button55.jpg')">
 
 <div style="position: absolute; width: 121px; height: 68px; z-index: 1; left: 0px; top: 2px; background-color: #000000" id="layer1">
 	<img border="0" src="UCR%20logo%20negro.jpg" width="110" height="69"></div>
@@ -90,14 +95,12 @@ src="Cursos%202_archivos/image001.gif" v:shapes="_x0000_s1045"></span><![endif]>
 <p>&nbsp;</p>
 <div style="position: absolute; width: 255px; height: 33px; z-index: 12; left: 383px; top: 274px" id="capa1">
 	<b><font face="Tahoma" size="2">Teoría Microeconómica 1</font></b></div>
-<div style="position: absolute; width: 100px; height: 100px; z-index: 14; left: 376px; top: 640px" id="capa4">
-	<a href="../../Mis%20sitios%20Web/Microeconomia/TM1Programa.pdf">
-	<img border="0" id="img12" src="../../Mis%20sitios%20Web/Microeconomia/button22.jpg" height="25" width="150" alt="  Programa del curso" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-img-hover: 0; fp-img-press: 0; fp-preload: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Programa del curso"></a><p style="margin-top: 0; margin-bottom: 0">
-	<a href="../../Mis%20sitios%20Web/Microeconomia/Examenes/Examenes.htm">
-	<img border="0" id="img13" src="../../Mis%20sitios%20Web/Microeconomia/button24.jpg" height="25" width="150" alt="  Exámenes" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-img-hover: 0; fp-img-press: 0; fp-preload: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Exámenes"></a></p>
-	<p style="margin-top: 0; margin-bottom: 0">
-	<a href="../../Mis%20sitios%20Web/Microeconomia/NotasTeoriaMicro1.pdf">
-	<img border="0" id="img14" src="../../Mis%20sitios%20Web/Microeconomia/button28.jpg" height="25" width="150" alt="  Calificaciones" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-img-hover: 0; fp-img-press: 0; fp-preload: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Calificaciones"></a><a href="https://www.dropbox.com/s/ued94tolbyp4nhj/LibroMicroeconomia.zip"><img border="0" id="img15" src="../../Mis%20sitios%20Web/Microeconomia/button29.jpg" height="25" width="150" alt="  Libro de ejercicios" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-img-hover: 0; fp-img-press: 0; fp-preload: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Libro de ejercicios"></a></div>
+<div style="position: absolute; width: 302px; height: 100px; z-index: 16; left: 702px; top: 318px" id="capa6">
+	<p style="margin-top:0; margin-bottom:0"><b><font face="Tahoma" size="2">
+	Clases: </font></b>
+	<p style="margin-top:0; margin-bottom:0"><font face="Tahoma" size="2">Lunes, 
+	Jueves: 7 - 8:40 am</font><p style="margin-top:0; margin-bottom:0">
+	<font face="Tahoma" size="2">Aula 128 de Ciencias Económicas</font></div>
 <p>&nbsp;</p>
 <div style="position: absolute; width: 140px; height: 40px; z-index: 9; left: 103px; top: 323px" id="layer15">
 	<a href="Cursos%202.htm">
@@ -111,7 +114,7 @@ src="Cursos%202_archivos/image001.gif" v:shapes="_x0000_s1045"></span><![endif]>
 	Clases: </font></b>
 	<p style="margin-top:0; margin-bottom:0"><font face="Tahoma" size="2">Martes, Viernes: 7 
 	- 8:40 am</font><p style="margin-top:0; margin-bottom:0">
-	<font face="Tahoma" size="2">Auditorio de Ciencias Económicas.</font><p style="margin-top:0; margin-bottom:0">&nbsp;<p style="margin-top:0; margin-bottom:0">
+	<font face="Tahoma" size="2">Auditorio de Ciencias Económicas</font><p style="margin-top:0; margin-bottom:0">&nbsp;<p style="margin-top:0; margin-bottom:0">
 	<font face="Tahoma" size="2"><b>Laboratorios:</b> </font>
 	<p style="margin-top:0; margin-bottom:0"><font face="Tahoma" size="2">Grupo 
 	1: Miércoles 7 - 8:40 am, CE 141</font><p style="margin-top:0; margin-bottom:0">
@@ -125,17 +128,39 @@ src="Cursos%202_archivos/image001.gif" v:shapes="_x0000_s1045"></span><![endif]>
 	<img border="0" id="img25" src="buttonB.jpg" height="40" width="200" alt="Curriculum Vitae" fp-style="fp-btn: Soft Rectangle 5; fp-font-size: 8; fp-justify-horiz: 0" fp-title="Curriculum Vitae" onmouseover="FP_swapImg(1,0,/*id*/'img25',/*url*/'buttonC.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img25',/*url*/'buttonB.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img25',/*url*/'buttonD.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img25',/*url*/'buttonC.jpg')"></a></div>
 <p><!--[if gte vml 1]><v:line
  id="_x0000_s1044" alt="" style='position:absolute;left:0;text-align:left;
- top:0;z-index:1' from="353.5pt,346pt" to="497pt,346pt" strokecolor="#39f"
+ top:0;z-index:1' from="354pt,314.5pt" to="497.5pt,314.5pt" strokecolor="#39f"
  strokeweight="1.5pt"/><![endif]--><![if !vml]><span style='mso-ignore:vglayout;
-position:absolute;z-index:1;left:705px;top:690px;width:291px;height:4px'><img
+position:absolute;z-index:1;left:706px;top:627px;width:291px;height:4px'><img
 width=291 height=4 src="Cursos%202_archivos/image001.gif" v:shapes="_x0000_s1044"></span><![endif]></p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<div style="position: absolute; width: 289px; height: 100px; z-index: 15; left: 683px; top: 642px" id="capa8">
+	<a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img36" src="button72.jpg" height="25" width="225" alt="  Programa del curso" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Programa del curso" onmouseover="FP_swapImg(1,0,/*id*/'img36',/*url*/'button73.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img36',/*url*/'button72.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img36',/*url*/'button74.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img36',/*url*/'button73.jpg')"></a><p>
+	<a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img37" src="button45.jpg" height="25" width="225" alt="  Exámenes" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Exámenes" onmouseover="FP_swapImg(1,0,/*id*/'img37',/*url*/'button46.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img37',/*url*/'button45.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img37',/*url*/'button47.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img37',/*url*/'button46.jpg')"></a></p>
+	<p><a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img38" src="button51.jpg" height="25" width="225" alt="  Calificaciones" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Calificaciones" onmouseover="FP_swapImg(1,0,/*id*/'img38',/*url*/'button52.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img38',/*url*/'button51.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img38',/*url*/'button53.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img38',/*url*/'button52.jpg')"></a></p>
+	<p><a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img39" src="button54.jpg" height="25" width="225" alt="  Libro de ejercicios" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0; fp-orig: 0" fp-title="  Libro de ejercicios" onmouseover="FP_swapImg(1,0,/*id*/'img39',/*url*/'button55.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img39',/*url*/'button54.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img39',/*url*/'button56.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img39',/*url*/'button55.jpg')"></a></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
+<div style="position: absolute; width: 289px; height: 100px; z-index: 15; left: 378px; top: 642px" id="capa5">
+	<a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img30" src="button72.jpg" height="25" width="225" alt="  Programa del curso" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Programa del curso" onmouseover="FP_swapImg(1,0,/*id*/'img30',/*url*/'button73.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img30',/*url*/'button72.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img30',/*url*/'button74.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img30',/*url*/'button73.jpg')"></a><p>
+	<a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img31" src="button45.jpg" height="25" width="225" alt="  Exámenes" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Exámenes" onmouseover="FP_swapImg(1,0,/*id*/'img31',/*url*/'button46.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img31',/*url*/'button45.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img31',/*url*/'button47.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img31',/*url*/'button46.jpg')"></a></p>
+	<p><a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img34" src="button51.jpg" height="25" width="225" alt="  Calificaciones" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Calificaciones" onmouseover="FP_swapImg(1,0,/*id*/'img34',/*url*/'button52.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img34',/*url*/'button51.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img34',/*url*/'button53.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img34',/*url*/'button52.jpg')"></a></p>
+	<p><a href="NotasTeoriaMicro1.pdf">
+	<img border="0" id="img35" src="button54.jpg" height="25" width="225" alt="  Libro de ejercicios" fp-style="fp-btn: Simple Arrow 1; fp-justify-horiz: 0; fp-proportional: 0" fp-title="  Libro de ejercicios" onmouseover="FP_swapImg(1,0,/*id*/'img35',/*url*/'button55.jpg')" onmouseout="FP_swapImg(0,0,/*id*/'img35',/*url*/'button54.jpg')" onmousedown="FP_swapImg(1,0,/*id*/'img35',/*url*/'button56.jpg')" onmouseup="FP_swapImg(0,0,/*id*/'img35',/*url*/'button55.jpg')"></a></div>
+<div style="position: absolute; width: 303px; height: 100px; z-index: 17; left: 699px; top: 441px" id="capa9">
+	<font face="Tahoma" size="2">
+	<a href="../../Mis%20sitios%20Web/Microeconomia/Van%20Zandt.pdf">Libro de texto de Van 
+	Zandt</a></font></div>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
 <p>&nbsp;</p>
